@@ -1,0 +1,635 @@
+‎<!DOCTYPE html>
+‎<html lang="fr">
+‎<head>
+‎<meta charset="UTF-8">
+‎<meta name="viewport" content="width=device-width, initial-scale=1.0">
+‎<title>BABY CASH COIN</title>
+‎
+‎<link rel="stylesheet" href="style.css">
+‎
+‎<link rel="stylesheet"
+‎href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+‎
+‎</head>
+‎<body>
+‎
+‎<div id="app">
+‎
+‎<header class="header">
+‎
+‎<div class="header-left">
+‎
+‎<h1 id="headerPseudo"></h1>
+‎
+‎<div class="top-level">
+‎
+‎<div class="badge" id="levelBadge">
+‎🥉 Bronze
+‎</div>
+‎
+‎<div class="xp-box">
+‎
+‎<div class="xp-text">
+‎
+‎<span id="levelName">
+‎Niveau 1
+‎</span>
+‎
+‎<span id="levelPercent">
+‎0%
+‎</span>
+‎
+‎</div>
+‎
+‎<div class="xp-bar">
+‎
+‎<div class="xp-fill"
+‎id="xpFill"></div>
+‎
+‎</div>
+‎
+‎</div>
+‎
+‎</div>
+‎
+‎</div>
+‎
+‎<div class="header-right">
+‎
+‎<button class="theme-btn"
+‎id="themeToggle">
+‎
+‎<i class="fa-solid fa-moon"></i>
+‎
+‎</button>
+‎
+‎<button class="notif-btn">
+‎
+‎<i class="fa-regular fa-bell"></i>
+‎
+‎</button>
+‎
+‎<div class="bcc-logo">
+‎
+‎<div class="bcc-inner">
+‎BCC
+‎</div>
+‎
+‎</div>
+‎
+‎</div>
+‎
+‎</header>
+‎
+‎<section id="homeSection"
+‎class="page active-page">
+‎
+‎<div class="future-box">
+‎
+‎<div class="future-title">
+‎❝ BCC FUTURE ❞
+‎</div>
+‎
+‎<div class="future-scroll">
+‎
+‎<div class="future-track">
+‎
+‎<span>
+‎Bienvenue dans BABY CASH COIN
+‎</span>
+‎
+‎<span>
+‎Votre avenir numérique commence ici
+‎</span>
+‎
+‎<span>
+‎Gagnez des récompenses BCC
+‎</span>
+‎
+‎<span>
+‎Système sécurisé nouvelle génération
+‎</span>
+‎
+‎</div>
+‎
+‎</div>
+‎
+‎</div>
+‎
+‎<div class="balance-card glow-card">
+‎
+‎<button class="eye-btn"
+‎id="toggleBalance">
+‎
+‎<i class="fa-regular fa-eye"></i>
+‎
+‎</button>
+‎
+‎<p class="balance-title">
+‎Solde principal
+‎</p>
+‎
+‎<div class="balance-main">
+‎
+‎<h2 id="balanceText">
+‎0
+‎</h2>
+‎
+‎<span>
+‎BCC
+‎</span>
+‎
+‎</div>
+‎
+‎<div class="cfa-box">
+‎
+‎<p>
+‎1 BCC = 1 FCFA
+‎</p>
+‎
+‎<div class="cfa-live">
+‎
+‎<h3 id="cfaText">
+‎≈ 0 FCFA
+‎</h3>
+‎
+‎<div class="live-dot"></div>
+‎
+‎</div>
+‎
+‎</div>
+‎
+‎</div>
+‎
+‎<div class="actions">
+‎
+‎<button class="action-btn"
+‎id="sendBtn">
+‎
+‎<div class="action-circle">
+‎
+‎<i class="fa-solid fa-paper-plane"></i>
+‎
+‎</div>
+‎
+‎<span>
+‎Envoyer
+‎</span>
+‎
+‎</button>
+‎
+‎<button class="action-btn"
+‎id="receiveBtn">
+‎
+‎<div class="action-circle">
+‎
+‎<i class="fa-solid fa-download"></i>
+‎
+‎</div>
+‎
+‎<span>
+‎Recevoir
+‎</span>
+‎
+‎</button>
+‎
+‎<button class="action-btn"
+‎id="scanBtn">
+‎
+‎<div class="action-circle">
+‎
+‎<i class="fa-solid fa-qrcode"></i>
+‎
+‎</div>
+‎
+‎<span>
+‎Scanner
+‎</span>
+‎
+‎</button>
+‎
+‎<button class="action-btn"
+‎id="convertBtn">
+‎
+‎<div class="action-circle">
+‎
+‎<i class="fa-solid fa-repeat"></i>
+‎
+‎</div>
+‎
+‎<span>
+‎Convertir
+‎</span>
+‎
+‎</button>
+‎
+‎</div>
+‎
+‎<div class="history-box">
+‎
+‎<div class="history-icon">
+‎🕓
+‎</div>
+‎
+‎<h3>
+‎Aucune transaction
+‎</h3>
+‎
+‎<p>
+‎Les activités apparaîtront ici
+‎</p>
+‎
+‎</div>
+‎
+‎</section>
+‎<section id="rewardSection"
+‎class="page">
+‎
+‎<div class="reward-header">
+‎
+‎<h2>
+‎💎 Récompenses BCC
+‎</h2>
+‎
+‎<div class="reward-balance"
+‎id="rewardBalance">
+‎
+‎0 BCC
+‎
+‎</div>
+‎
+‎<button class="main-btn"
+‎id="transferRewardBtn">
+‎
+‎Envoyer mes récompenses
+‎
+‎</button>
+‎
+‎</div>
+‎
+‎<div class="scratch-card">
+‎
+‎<h3>
+‎Carte cadeau Premium BCC
+‎</h3>
+‎
+‎<div class="scratch-area"
+‎id="scratchCard">
+‎
+‎GRATTE ICI
+‎
+‎</div>
+‎
+‎<div id="scratchTimer"
+‎style="
+‎margin-top:15px;
+‎text-align:center;
+‎font-weight:bold;
+‎">
+‎
+‎Disponible maintenant
+‎
+‎</div>
+‎
+‎</div>
+‎
+‎</section>
+‎
+‎<section id="missionSection"
+‎class="page">
+‎
+‎<div class="mission-box">
+‎
+‎<h2>
+‎MISSIONS
+‎</h2>
+‎
+‎<div class="mission-group">
+‎
+‎<h3>
+‎🔥 CPALEAD
+‎</h3>
+‎
+‎<button class="mission-btn">
+‎Offerwall
+‎</button>
+‎
+‎<button class="mission-btn">
+‎Jeux rémunérés
+‎</button>
+‎
+‎<button class="mission-btn">
+‎Apps
+‎</button>
+‎
+‎</div>
+‎
+‎<div class="mission-group">
+‎
+‎<h3>
+‎🟢 OFFERTORO
+‎</h3>
+‎
+‎<button class="mission-btn">
+‎Jeux
+‎</button>
+‎
+‎<button class="mission-btn">
+‎Sondages
+‎</button>
+‎
+‎</div>
+‎
+‎<div class="mission-group">
+‎
+‎<h3>
+‎🔵 LOOTABLY
+‎</h3>
+‎
+‎<button class="mission-btn">
+‎Vidéos
+‎</button>
+‎
+‎<button class="mission-btn">
+‎Mini tâches
+‎</button>
+‎
+‎<button class="mission-btn">
+‎Sondages
+‎</button>
+‎
+‎<button class="mission-btn">
+‎Applications
+‎</button>
+‎
+‎</div>
+‎
+‎<div class="mission-group">
+‎
+‎<h3>
+‎📱 RÉSEAUX SOCIAUX
+‎</h3>
+‎
+‎<button class="mission-btn">
+‎TikTok
+‎</button>
+‎
+‎<button class="mission-btn">
+‎Facebook
+‎</button>
+‎
+‎<button class="mission-btn">
+‎YouTube
+‎</button>
+‎
+‎<button class="mission-btn">
+‎Instagram
+‎</button>
+‎
+‎<button class="mission-btn">
+‎Telegram
+‎</button>
+‎
+‎<button class="mission-btn">
+‎Twitter X
+‎</button>
+‎
+‎<button class="mission-btn">
+‎Autres Réseaux
+‎</button>
+‎
+‎</div>
+‎
+‎<div class="mission-group">
+‎
+‎<h3>
+‎PARRAINAGE
+‎</h3>
+‎
+‎<div class="referral-box">
+‎
+‎<input
+‎type="text"
+‎value="https://bccfuture.com/ref/BCC20458"
+‎readonly>
+‎
+‎<button class="main-btn"
+‎id="copyReferral">
+‎
+‎Copier le lien
+‎
+‎</button>
+‎
+‎</div>
+‎
+‎</div>
+‎
+‎</div>
+‎
+‎</section>
+‎<section id="settingsSection"
+‎class="page">
+‎
+‎<div class="settings-container">
+‎
+‎<div class="settings-card">
+‎
+‎<h2>
+‎💳 SOLDE & PLAFOND
+‎</h2>
+‎
+‎<p>
+‎Principal : 0 BCC
+‎</p>
+‎
+‎<p>
+‎Récompense : 0 BCC
+‎</p>
+‎
+‎<p>
+‎Plafond : 500 000 BCC/mois
+‎</p>
+‎
+‎<p>
+‎✓ Vérifié = 1 500 000 BCC/mois
+‎</p>
+‎
+‎<p>
+‎Utilisé : 0 BCC
+‎</p>
+‎
+‎</div>
+‎
+‎<div class="settings-card">
+‎
+‎<h2>
+‎🪪 KYC
+‎</h2>
+‎
+‎<input type="file"
+‎id="kycUpload">
+‎
+‎<p class="kyc-status">
+‎⏳ En attente
+‎</p>
+‎
+‎</div>
+‎
+‎<div class="settings-card">
+‎
+‎<h2>
+‎🎯 MISSIONS
+‎</h2>
+‎
+‎<p>
+‎✓ 0 validées
+‎</p>
+‎
+‎<p>
+‎⏳ 0 en attente
+‎</p>
+‎
+‎<p>
+‎✕ 0 refusée
+‎</p>
+‎
+‎<p>
+‎Total gagné : 0 BCC
+‎</p>
+‎
+‎</div>
+‎
+‎<div class="settings-card">
+‎
+‎<h2>
+‎👥 PARRAINAGE
+‎</h2>
+‎
+‎<p>
+‎Code : BCC
+‎</p>
+‎
+‎<p>
+‎0 filleuls
+‎</p>
+‎
+‎<p>
+‎0 BCC gagnés
+‎</p>
+‎
+‎<button class="main-btn"
+‎id="copyReferral2">
+‎
+‎Copier lien
+‎
+‎</button>
+‎
+‎</div>
+‎
+‎<div class="settings-card">
+‎
+‎<h2>
+‎⚙️ ACTIONS
+‎</h2>
+‎
+‎<button
+‎class="main-btn"
+‎id="contactSupportBtn">
+‎
+‎Contacter le support
+‎
+‎</button>
+‎
+‎<button
+‎class="mission-btn"
+‎id="logoutBtn">
+‎
+‎Déconnexion
+‎
+‎</button>
+‎
+‎</div>
+‎
+‎</div>
+‎
+‎</section>
+‎
+‎<nav class="bottom-nav">
+‎
+‎<button class="nav-item active-nav"
+‎data-page="homeSection">
+‎
+‎<i class="fa-solid fa-house"></i>
+‎
+‎<span>
+‎Accueil
+‎</span>
+‎
+‎</button>
+‎
+‎<button class="nav-item"
+‎data-page="rewardSection">
+‎
+‎<i class="fa-solid fa-gift"></i>
+‎
+‎<span>
+‎Récompense
+‎</span>
+‎
+‎</button>
+‎
+‎<button class="center-btn">
+‎
+‎<div class="center-inner">
+‎
+‎<div class="center-scroll">
+‎
+‎<span>
+‎INFOS BCC
+‎</span>
+‎
+‎</div>
+‎
+‎</div>
+‎
+‎</button>
+‎
+‎<button class="nav-item"
+‎data-page="missionSection">
+‎
+‎<i class="fa-solid fa-chart-line"></i>
+‎
+‎<span>
+‎Missions
+‎</span>
+‎
+‎</button>
+‎
+‎<button class="nav-item"
+‎data-page="settingsSection">
+‎
+‎<i class="fa-regular fa-user"></i>
+‎
+‎<span>
+‎Paramètres
+‎</span>
+‎
+‎</button>
+‎
+‎</nav>
+‎
+‎</div>
+‎
+‎<div class="modal"
+‎id="mainModal">
+‎
+‎<div class="modal-content"
+‎id="modalContent"></div>
+‎
+‎</div>
+‎
+‎<script src="script.js"></script>
+‎
+‎</body>
+‎</html>
+‎
